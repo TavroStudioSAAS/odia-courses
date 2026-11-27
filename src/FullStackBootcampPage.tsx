@@ -31,6 +31,7 @@ import {
 
 const CHECKOUT = "https://rzp.io/rzp/gi2dk7aW";
 const CHANNEL = "https://whatsapp.com/channel/0029VbDnzsqHrDZpCa9z473T";
+const FB = "https://www.facebook.com/AIinOdia";
 const FORM = "https://forms.gle/6Nis15gEsEm7nnWu7";
 const PROFILE = "https://chandrakantabehera.dev/";
 const NEXO = "https://nexoplayer.chandrakantabehera.dev/";
@@ -199,6 +200,14 @@ export default function FullStackBootcampPage() {
                     WhatsApp Channel
                   </a>
                   <a
+                    href={FB}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#1877f2] px-4 py-3.5 text-sm font-extrabold text-white transition hover:-translate-y-0.5"
+                  >
+                    Join FB Page <ArrowUpRight size={16} />
+                  </a>
+                  <a
                     href={FORM}
                     target="_blank"
                     rel="noopener"
@@ -267,7 +276,7 @@ export default function FullStackBootcampPage() {
                 ))}
               </ul>
 
-              <div className="mt-5 border-t border-white/10 pt-4">
+              <div className="mt-5 space-y-2 border-t border-white/10 pt-4">
                 <a
                   href={CHANNEL}
                   target="_blank"
@@ -276,7 +285,15 @@ export default function FullStackBootcampPage() {
                 >
                   <MessageCircle size={16} /> Join WhatsApp Channel
                 </a>
-                <p className="mt-2 text-center text-[11px] text-white/60">
+                <a
+                  href={FB}
+                  target="_blank"
+                  rel="noopener"
+                  className="flex w-full items-center justify-center gap-1.5 rounded-xl bg-[#1877f2] px-4 py-2.5 text-xs font-extrabold text-white"
+                >
+                  Join FB Page <ArrowUpRight size={14} />
+                </a>
+                <p className="pt-1 text-center text-[11px] text-white/60">
                   Community group link is shared inside the WhatsApp Channel (spam-free).
                 </p>
               </div>
@@ -453,6 +470,7 @@ export default function FullStackBootcampPage() {
               <a href={NEXO} target="_blank" rel="noopener" className="text-white/80 hover:text-white">NexoPlayer ↗</a>
               <a href={KATHAA} target="_blank" rel="noopener" className="text-white/80 hover:text-white">Kathaa.app ↗</a>
               <a href={CHANNEL} target="_blank" rel="noopener" className="text-emerald-300">WhatsApp Channel ↗</a>
+              <a href={FB} target="_blank" rel="noopener" className="text-sky-300">Facebook Page ↗</a>
             </nav>
           </div>
           <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-5 text-xs text-white/50 sm:flex-row sm:justify-between">

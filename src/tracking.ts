@@ -14,6 +14,7 @@ export function track(event: string, params: Record<string, unknown> = {}) {
 const rules: { match: (url: URL) => boolean; event: string; params?: Record<string, unknown> }[] = [
   { match: u => u.hostname === "forms.gle" || u.hostname === "docs.google.com", event: "registration_form_click" },
   { match: u => u.hostname.endsWith("whatsapp.com") && u.pathname.startsWith("/channel"), event: "whatsapp_channel_click" },
+  { match: u => u.hostname.endsWith("facebook.com"), event: "facebook_page_click" },
   { match: u => u.hostname === "chat.whatsapp.com", event: "whatsapp_group_click" },
   { match: u => u.hostname === "rzp.io" && u.pathname.includes("gi2dk7aW"), event: "fullstack_bootcamp_checkout_click", params: { value: 999, currency: "INR" } },
   { match: u => u.hostname === "rzp.io" || u.hostname.endsWith("razorpay.com"), event: "qissa_pack_click", params: { value: 499, currency: "INR" } },
