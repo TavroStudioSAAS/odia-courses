@@ -173,46 +173,50 @@ export default function FullStackBootcampPage() {
                 Full Stack <span className="text-amber-300">AI App Developer</span> Bootcamp
               </h1>
               <p className="mt-3 text-[17px] leading-7 text-white/85 max-w-2xl">
-                Design • Build • Launch • Monetise Real Apps with AI. Build 3–4 real production-style apps in Odia + English — from UI screens to Razorpay checkout.
+                Design • Build • Launch • Monetise Real Apps with AI. First watch the free Odia workshop below, then join the 1-month live bootcamp to build 3–4 real apps.
               </p>
 
-              <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/15 bg-[#0b1020] shadow-2xl">
-                <img
-                  src={bannerImg}
-                  alt="Full Stack AI App Developer Bootcamp — Exclusive Launch Bundle ₹999"
-                  width={1024}
-                  height={576}
-                  className="aspect-video w-full object-contain"
+              {/* FREE WORKSHOP VIDEO FIRST — BIG PLYR YOUTUBE PLAYER */}
+              <div id="watch-workshop" className="mt-6 scroll-mt-24 rounded-[1.6rem] border border-amber-300/35 bg-[#0f1424] p-3 shadow-2xl sm:p-4">
+                <div className="mb-2.5 flex flex-wrap items-center justify-between gap-2 px-1">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-300/15 px-3 py-1 text-xs font-extrabold text-amber-300">
+                    <Play size={13} className="fill-current" /> WATCH FREE WORKSHOP IN ODIA
+                  </span>
+                  <span className="text-xs font-semibold text-white/65">Step-by-step live app building</span>
+                </div>
+                <PlyrYoutubePlayer
+                  videoId={YT_VIDEO_ID}
+                  title="Watch making real apps with AI in Odia — Free Workshop"
                 />
-              </div>
-
-              {/* QUICK WATCH LINK */}
-              <div className="mt-5 flex flex-wrap items-center gap-3">
-                <a
-                  href="#watch-workshop"
-                  className="inline-flex items-center gap-2 rounded-full border border-amber-300/50 bg-amber-300/15 px-5 py-3 text-sm font-extrabold text-amber-200 transition hover:bg-amber-300/25"
-                >
-                  <Play size={16} className="fill-current" />
-                  Watch Making This App in Odia (FREE)
-                </a>
-                <a
-                  href={CHANNEL}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#18a34a] px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5"
-                >
-                  <MessageCircle size={16} />
-                  WhatsApp Channel
-                </a>
-                <a
-                  href={GROUP}
-                  target="_blank"
-                  rel="noopener"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3 text-sm font-extrabold text-white transition hover:bg-white/20"
-                >
-                  <Users size={16} />
-                  WhatsApp Group
-                </a>
+                <div className="mt-3.5 flex flex-wrap items-center gap-2.5">
+                  <EnrollBtn className="flex-1 sm:flex-none" />
+                  <a
+                    href={CHANNEL}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#18a34a] px-4 py-3.5 text-sm font-extrabold text-white transition hover:-translate-y-0.5"
+                  >
+                    <MessageCircle size={16} />
+                    WhatsApp Channel
+                  </a>
+                  <a
+                    href={GROUP}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-3.5 text-sm font-extrabold text-white transition hover:bg-white/20"
+                  >
+                    <Users size={16} />
+                    WhatsApp Group
+                  </a>
+                  <a
+                    href={FORM}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-4 py-3.5 text-sm font-bold text-white/90 transition hover:bg-white/10"
+                  >
+                    Free Form <ArrowUpRight size={15} />
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -297,73 +301,8 @@ export default function FullStackBootcampPage() {
       </section>
 
       <main className="bg-[var(--surface)]">
-        {/* WATCH FREE WORKSHOP WITH PLYR */}
-        <section
-          data-track-area="watch_workshop"
-          id="watch-workshop"
-          className="mx-auto max-w-5xl scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16"
-        >
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#fff0d5] px-3 py-1.5 text-[11px] font-extrabold tracking-[0.14em] text-[#b45309] uppercase">
-              <Play size={13} /> Free Workshop Preview • Odia
-            </span>
-            <h2 className="font-display mt-4 text-[clamp(1.8rem,7vw,2.8rem)] leading-[1.06] font-extrabold text-[var(--ink)] text-balance">
-              Watch how we build real apps <span className="text-[#ff6b1a]">in Odia — FREE</span>
-            </h2>
-            <p className="mt-3 text-[15px] leading-6 text-[var(--muted)]">
-              Video dekha, step by step bujha — tapare Full Stack AI Bootcamp re join kari 3–4 ta real app deploy & monetise kara.
-            </p>
-          </div>
-
-          <div className="mt-7 rounded-[1.8rem] border border-[var(--line)] bg-[#0b1020] p-3 shadow-2xl sm:p-5">
-            <PlyrYoutubePlayer
-              videoId={YT_VIDEO_ID}
-              title="Watch making real apps with AI in Odia — Free Workshop"
-            />
-            <div className="mt-4 flex flex-col items-center justify-between gap-4 rounded-2xl bg-white/5 p-4 text-white sm:flex-row">
-              <div className="text-center sm:text-left">
-                <p className="font-display text-lg font-extrabold text-amber-300">
-                  Ready to build & monetise 3–4 real apps?
-                </p>
-                <p className="text-xs text-white/75">
-                  Enroll in the Paid Bootcamp (₹999) — get confirmation & access details in your email.
-                </p>
-              </div>
-              <EnrollBtn className="w-full shrink-0 sm:w-auto" />
-            </div>
-          </div>
-
-          {/* CTA STRIP BELOW VIDEO */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={CHANNEL}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-2 rounded-full bg-[#18a34a] px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5"
-            >
-              <MessageCircle size={17} /> Join WhatsApp Channel
-            </a>
-            <a
-              href={GROUP}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-2 rounded-full bg-[#0f1424] px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5"
-            >
-              <Users size={17} /> Join WhatsApp Group
-            </a>
-            <a
-              href={FORM}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white px-5 py-3 text-sm font-extrabold text-[var(--ink)] transition hover:-translate-y-0.5"
-            >
-              Free Bootcamp Form <ArrowUpRight size={16} />
-            </a>
-          </div>
-        </section>
-
         {/* EXCLUSIVE LAUNCH BUNDLE */}
-        <section data-track-area="bundle" className="mx-auto max-w-6xl px-4 pb-12 sm:px-6 sm:pb-16">
+        <section data-track-area="bundle" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
           <div className="rounded-[1.8rem] border border-[var(--line)] bg-white p-6 shadow-sm sm:p-8">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
@@ -375,6 +314,17 @@ export default function FullStackBootcampPage() {
                 </h2>
               </div>
               <EnrollBtn label="Claim Bundle + Enroll ₹999" />
+            </div>
+
+            <div className="mt-6 overflow-hidden rounded-[1.4rem] border border-[var(--line)] bg-[#0b1020] shadow-lg">
+              <img
+                src={bannerImg}
+                alt="Full Stack AI App Developer Bootcamp — Exclusive Launch Bundle ₹999"
+                loading="lazy"
+                width={1024}
+                height={576}
+                className="aspect-video w-full object-contain"
+              />
             </div>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
