@@ -15,11 +15,13 @@ const NEXO = "https://nexoplayer.chandrakantabehera.dev/";
 const KATHAA = "https://kathaa.app/";
 const BRAND = "https://codebitbybit.com/";
 
+const CHECKOUT = "https://rzp.io/rzp/gi2dk7aW";
+
 const courses = [
-  { name: "FREE Odia AI Bootcamp", tag: "FREE • LIVE", desc: "Odia re AI sikha — ChatGPT, Gemini, ElevenLabs, Suno. Nije app, website au game banha. No coding needed.", href: BOOTCAMP_PATH, img: POSTER, free: true },
-  { name: "Full Stack AI App Developer Bootcamp", tag: "PAID • ₹999 • 20 SEATS", desc: "1 Month Live Bootcamp — Build 3–4 real apps (StoryVerse, NexoPlayer, Kathaa bundle included). Design, build, deploy & monetise.", href: FULLSTACK_PATH, img: fullstackBanner, free: false },
-  { name: "AI Website Workshop", tag: "COMING SOON", desc: "Prompt ru pura website — design, pages au launch. Odia re, step by step.", free: false },
-  { name: "AI Game Workshop", tag: "COMING SOON", desc: "Character, level au coins sahita nija game tiare kara — AI tools sahita.", free: false },
+  { name: "FREE Odia AI Bootcamp", tag: "FREE • LIVE", desc: "Odia re AI sikha — ChatGPT, Gemini, ElevenLabs, Suno. Nije app, website au game banha. No coding needed.", href: BOOTCAMP_PATH, img: POSTER, featured: true, free: true },
+  { name: "Full Stack AI App Developer Bootcamp", tag: "LIVE • ₹999 • 20 SEATS", desc: "1 Month Live Bootcamp — Build 3–4 real apps (NexoPlayer, Kathaa & StoryVerse bundle FREE). Design, build, deploy & monetise.", href: FULLSTACK_PATH, checkoutHref: CHECKOUT, img: fullstackBanner, featured: true, free: false },
+  { name: "AI Website Workshop", tag: "COMING SOON", desc: "Prompt ru pura website — design, pages au launch. Odia re, step by step.", featured: false, free: false },
+  { name: "AI Game Workshop", tag: "COMING SOON", desc: "Character, level au coins sahita nija game tiare kara — AI tools sahita.", featured: false, free: false },
 ];
 const apps = [
   { name: "NexoPlayer", tag: "Audio + Media Hub", img: nexoImg, href: NEXO },
@@ -54,15 +56,32 @@ export default function HomePage() {
       <main className="bg-[var(--surface)]">
         <section data-track-area="courses" id="courses" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-12 sm:px-6 sm:py-16">
           <div className="mx-auto max-w-2xl text-center px-1"><span className="inline-flex items-center gap-2 rounded-full bg-[#fff0d5] px-3 py-1.5 text-[11px] font-extrabold tracking-[0.14em] text-[#b45309] uppercase"><Sparkles size={14} /> Our courses</span><h2 className="font-display mt-4 text-[clamp(1.85rem,7vw,3rem)] leading-[1.04] font-extrabold text-[var(--ink)] text-balance">Aama <span className="text-[#ff6b1a]">courses au workshops</span></h2><p className="mt-3 text-[15px] leading-6 text-[var(--muted)]">Free ra bele free — sabu Odia + English re, beginner pain tiare.</p></div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {courses.map(c => (
-              <article key={c.name} className={`overflow-hidden rounded-[1.5rem] shadow-xl ${c.free ? "bg-[#0f1424] text-white ring-4 ring-amber-300 md:col-span-3 lg:grid lg:grid-cols-[1.1fr_1fr]" : "border-2 border-dashed border-[var(--line)] bg-[var(--card)]"}`}>
-                {c.img && <img src={c.img} alt={`${c.name} preview`} loading="lazy" className="aspect-video w-full object-cover lg:h-full" />}
+              <article key={c.name} className={`overflow-hidden rounded-[1.5rem] shadow-xl ${c.featured ? `md:col-span-2 lg:grid lg:grid-cols-[1.15fr_1fr] lg:items-center text-white ${c.free ? "bg-[#0f1424] ring-4 ring-amber-300" : "bg-[#120e29] ring-2 ring-amber-300/80"}` : "border-2 border-dashed border-[var(--line)] bg-[var(--card)]"}`}>
+                {c.img && (
+                  <div className="bg-[#0b1020]">
+                    <img src={c.img} alt={`${c.name} preview`} loading="lazy" width={1024} height={576} className="aspect-video w-full object-contain" />
+                  </div>
+                )}
                 <div className="flex flex-col items-start p-6 sm:p-8">
-                  <span className={`rounded-full px-3 py-1 text-[11px] font-extrabold ${c.free ? "bg-emerald-400/15 text-emerald-300" : "bg-[#fff0d5] text-[#9a4a00]"}`}>{c.tag}</span>
-                  <h3 className={`font-display mt-3 text-[clamp(1.5rem,6vw,2.2rem)] leading-tight font-extrabold ${c.free ? "" : "text-[var(--ink)]"}`}>{c.name}</h3>
-                  <p className={`mt-2 text-[15px] leading-6 ${c.free ? "text-white/75" : "text-[var(--muted)]"}`}>{c.desc}</p>
-                  {c.href ? <a href={c.href} className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#ff6b1a] px-5 py-3.5 text-sm font-extrabold text-white">Open course <ArrowRight size={17} /></a> : <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--surface)] px-4 py-2.5 text-xs font-extrabold text-[var(--muted)]">Join WhatsApp for updates →</span>}
+                  <span className={`rounded-full px-3 py-1 text-[11px] font-extrabold ${c.free ? "bg-emerald-400/15 text-emerald-300" : c.featured ? "bg-amber-300 text-[#211500]" : "bg-[#fff0d5] text-[#9a4a00]"}`}>{c.tag}</span>
+                  <h3 className={`font-display mt-3 text-[clamp(1.5rem,5vw,2.15rem)] leading-tight font-extrabold ${c.featured ? "text-white" : "text-[var(--ink)]"}`}>{c.name}</h3>
+                  <p className={`mt-2 text-[15px] leading-6 ${c.featured ? "text-white/80" : "text-[var(--muted)]"}`}>{c.desc}</p>
+                  {c.href ? (
+                    <div className="mt-5 flex flex-wrap gap-3">
+                      <a href={c.href} className="inline-flex items-center gap-2 rounded-full bg-[#ff6b1a] px-5 py-3.5 text-sm font-extrabold text-white glow-orange transition hover:-translate-y-0.5">
+                        {c.free ? "Open course" : "View Course & Free Preview"} <ArrowRight size={17} />
+                      </a>
+                      {c.checkoutHref && (
+                        <a href={c.checkoutHref} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-amber-300 px-5 py-3.5 text-sm font-extrabold text-[#211500] transition hover:-translate-y-0.5">
+                          Enroll ₹999 <ArrowUpRight size={17} />
+                        </a>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--surface)] px-4 py-2.5 text-xs font-extrabold text-[var(--muted)]">Join WhatsApp for updates →</span>
+                  )}
                 </div>
               </article>
             ))}

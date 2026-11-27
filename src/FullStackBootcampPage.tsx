@@ -176,11 +176,13 @@ export default function FullStackBootcampPage() {
                 Design • Build • Launch • Monetise Real Apps with AI. Build 3–4 real production-style apps in Odia + English — from UI screens to Razorpay checkout.
               </p>
 
-              <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/15 bg-[#0f1424] shadow-2xl">
+              <div className="mt-6 overflow-hidden rounded-[1.5rem] border border-white/15 bg-[#0b1020] shadow-2xl">
                 <img
                   src={bannerImg}
                   alt="Full Stack AI App Developer Bootcamp — Exclusive Launch Bundle ₹999"
-                  className="w-full object-cover"
+                  width={1024}
+                  height={576}
+                  className="aspect-video w-full object-contain"
                 />
               </div>
 
@@ -419,12 +421,14 @@ export default function FullStackBootcampPage() {
               </p>
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-[1.6rem] border border-white/15 bg-white/5 p-2 shadow-2xl sm:p-3">
+            <div className="mt-8 overflow-hidden rounded-[1.6rem] border border-white/15 bg-[#0f1424] p-2 shadow-2xl sm:p-3">
               <img
                 src={storyverseImg}
                 alt="StoryVerse 14 app screens including Splash, Onboarding, Home, Explore, Cart, Checkout, Razorpay Payment, Library and Immersive Reader"
                 loading="lazy"
-                className="w-full rounded-[1.2rem] object-cover"
+                width={1024}
+                height={682}
+                className="aspect-[3/2] w-full rounded-[1.2rem] object-contain"
               />
             </div>
 
