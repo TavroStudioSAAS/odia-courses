@@ -3,13 +3,12 @@ import logo from "./assets/img/codebitbybit-logo.png";
 import wordmark from "./assets/img/logo-wordmark.webp";
 import nexoImg from "./assets/img/nexoplayer.webp";
 import kathaaImg from "./assets/img/kathaa.webp";
-import { ArrowRight, ArrowUpRight, MessageCircle, Smartphone, Sparkles, Users } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MessageCircle, Smartphone, Sparkles } from "lucide-react";
 import fullstackBanner from "./assets/img/fullstack-bootcamp-banner.jpg";
 import { BOOTCAMP_PATH, FULLSTACK_PATH } from "./routes";
 
 const POSTER = `${import.meta.env.BASE_URL}media/bootcamp-intro-poster.jpg`;
 const CHANNEL = "https://whatsapp.com/channel/0029VbDnzsqHrDZpCa9z473T";
-const GROUP = "https://chat.whatsapp.com/DKlZz84PfZeGFtBIreYzbP";
 const PROFILE = "https://chandrakantabehera.dev/";
 const NEXO = "https://nexoplayer.chandrakantabehera.dev/";
 const KATHAA = "https://kathaa.app/";
@@ -93,7 +92,7 @@ export default function HomePage() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {apps.map(a => <a key={a.name} href={a.href} target="_blank" rel="noopener" className="group overflow-hidden rounded-[1.4rem] border border-[var(--line)] bg-[var(--card)] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"><img src={a.img} alt={`${a.name} app`} loading="lazy" className="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.03]" /><div className="flex items-center justify-between p-5"><div><p className="text-[11px] font-extrabold uppercase tracking-wider text-[#e35d00]">{a.tag}</p><h3 className="font-display mt-1 text-[20px] font-extrabold text-[var(--ink)]">{a.name}</h3></div><ArrowUpRight size={20} className="text-[var(--muted)]" /></div></a>)}
           </div>
-          <div className="mt-6 flex flex-col items-center gap-3 text-center"><p className="text-[13px] text-[var(--muted)]">Workshop re ei bhali app banheba ra rasta sikhiba.</p><div className="flex flex-wrap justify-center gap-3"><a href={BOOTCAMP_PATH} className="inline-flex items-center gap-2 rounded-full bg-[#0f1424] px-5 py-3 text-sm font-extrabold text-white">Join FREE Bootcamp <ArrowRight size={16} /></a><a href={GROUP} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-[#18a34a] px-5 py-3 text-sm font-extrabold text-white"><Users size={16} /> WhatsApp Group</a></div></div>
+          <div className="mt-6 flex flex-col items-center gap-3 text-center"><p className="text-[13px] text-[var(--muted)]">Workshop re ei bhali app banheba ra rasta sikhiba.</p><div className="flex flex-wrap justify-center gap-3"><a href={BOOTCAMP_PATH} className="inline-flex items-center gap-2 rounded-full bg-[#0f1424] px-5 py-3 text-sm font-extrabold text-white">Join FREE Bootcamp <ArrowRight size={16} /></a><a href={CHANNEL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full bg-[#18a34a] px-5 py-3 text-sm font-extrabold text-white"><MessageCircle size={16} /> WhatsApp Channel</a></div></div>
         </section>
       </main>
 

@@ -31,7 +31,6 @@ import {
 
 const CHECKOUT = "https://rzp.io/rzp/gi2dk7aW";
 const CHANNEL = "https://whatsapp.com/channel/0029VbDnzsqHrDZpCa9z473T";
-const GROUP = "https://chat.whatsapp.com/DKlZz84PfZeGFtBIreYzbP";
 const FORM = "https://forms.gle/6Nis15gEsEm7nnWu7";
 const PROFILE = "https://chandrakantabehera.dev/";
 const NEXO = "https://nexoplayer.chandrakantabehera.dev/";
@@ -200,15 +199,6 @@ export default function FullStackBootcampPage() {
                     WhatsApp Channel
                   </a>
                   <a
-                    href={GROUP}
-                    target="_blank"
-                    rel="noopener"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-3.5 text-sm font-extrabold text-white transition hover:bg-white/20"
-                  >
-                    <Users size={16} />
-                    WhatsApp Group
-                  </a>
-                  <a
                     href={FORM}
                     target="_blank"
                     rel="noopener"
@@ -277,23 +267,18 @@ export default function FullStackBootcampPage() {
                 ))}
               </ul>
 
-              <div className="mt-5 grid grid-cols-2 gap-2 border-t border-white/10 pt-4">
+              <div className="mt-5 border-t border-white/10 pt-4">
                 <a
                   href={CHANNEL}
                   target="_blank"
                   rel="noopener"
-                  className="flex items-center justify-center gap-1.5 rounded-xl bg-[#18a34a] px-3 py-2.5 text-xs font-extrabold text-white"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#18a34a] px-4 py-3 text-xs font-extrabold text-white"
                 >
-                  <MessageCircle size={15} /> Channel
+                  <MessageCircle size={16} /> Join WhatsApp Channel
                 </a>
-                <a
-                  href={GROUP}
-                  target="_blank"
-                  rel="noopener"
-                  className="flex items-center justify-center gap-1.5 rounded-xl border border-white/20 bg-white/10 px-3 py-2.5 text-xs font-extrabold text-white"
-                >
-                  <Users size={15} /> Group
-                </a>
+                <p className="mt-2 text-center text-[11px] text-white/60">
+                  Community group link is shared inside the WhatsApp Channel (spam-free).
+                </p>
               </div>
             </aside>
           </div>
