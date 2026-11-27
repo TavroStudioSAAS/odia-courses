@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://campaign.codebitbybit.com/sitemap.xml
+Sitemap: https://odia-courses.codebitbybit.com/sitemap.xml
